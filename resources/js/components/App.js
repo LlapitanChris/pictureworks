@@ -1,8 +1,26 @@
 import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 function App(props) {
-    
+    const {user, csrf, datenow, exists} = props
+    const [count, setCount] = useState(0)
+
+    let parsedExists = JSON.parse(exists)
+
+    useEffect(() => {
+        if(parsedExists) {
+            setCount(parsedExists.click_counts)
+        } else {
+            setCount(0)
+        }
+    },[])
+
+     const countClicks = (e) => {
+        e.preventDefault()
+        setCount(prevCount => prevCount + 1)
+    }
+
 return (
+
     <div className="container">
         <div className="row justify-content-center">
             <div className="col-md-8">
@@ -19,7 +37,7 @@ return (
             </div>
         </div>
     </div>
-        )
+    )
 }
 
 export default App;

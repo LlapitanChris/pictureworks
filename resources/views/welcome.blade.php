@@ -79,6 +79,7 @@
                 <div class="title m-b-md">
                     Click Counter
                 </div>
+                    <small>Please Login and go to home page to test the app. Thanks!</small>
             </div>
         </div>
     </body>

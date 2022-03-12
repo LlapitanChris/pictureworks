@@ -1,3 +1,75 @@
+## TO GET THE APP
+
+```	
+git clone https://github.com/LlapitanChris/pictureworks-exam.git
+```
+
+## TO UPDATE THE APP
+
+To run the app, run the commands on the terminal:
+```
+cd pictureworks-exam
+composer install
+npm install
+```
+
+## CREATE THE ENV
+
+> create a file '.env'
+> copy paste the code from the '.env.example' to '.env'
+> change the following lines, align it with your created postgreSQL database
+sample:
+```
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=mydb
+DB_USERNAME=myusername
+DB_PASSWORD=mypassword
+```
+
+## MIGRATE YOUR TABLES
+
+Run the migrations:
+
+```
+php artisan migrate
+```
+
+## SEED THE DATABASE
+
+```
+php artisan db:seed
+```
+
+## OPEN ANOTHER TERMINAL 
+Two terminals are required to run this app, the first terminal shall the serve the app and the second terminal shall watch the changes of the reactjs components
+
+## First terminal
+Run:
+```
+php artisan serve
+```
+
+## Second terminal
+Run:
+```
+npm run watch
+```
+
+## OPEN THE APP ON THE BROWSER
+Open the app to test it. ->  [Click Counter](http://localhost:8000/).
+
+## GO TO LOGIN
+Use the credentials provided on the login page
+[Click Counter - Login ](http://localhost:8000/login)
+
+## GO TO DASHBOARD
+Then go to dashboard to test the app.
+[Click Counter - Dashboard ](http://localhost:8000/home)
+
+## ENJOY
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
@@ -76,3 +148,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+

@@ -65942,10 +65942,11 @@ function App(props) {
   }, "Dashboard"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-body text-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    className: "p-5"
+    className: "p-5",
+    onSubmit: countClicks
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btn-clickme btn btn-outline-success form-control"
-  }, "Click Me!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Click Count:"))))));
+  }, "Click Me!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Click Count: ", count))))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -65954,7 +65955,8 @@ if (document.getElementById('root')) {
   var element = document.getElementById('root');
   var props = Object.assign({}, element.dataset);
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, props), element);
-}
+} // date_clicked: "2022-03-11"
+// 2022-03-11T19:57:15.901962Z
 
 /***/ }),
 

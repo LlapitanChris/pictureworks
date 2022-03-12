@@ -17,6 +17,21 @@ function App(props) {
      const countClicks = (e) => {
         e.preventDefault()
         setCount(prevCount => prevCount + 1)
+        
+        fetch('/sendrequest', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': csrf
+            },
+                body: JSON.stringify({counts: count + 1}),
+            }).then(response => response.json())
+            .then(data => {
+              console.log('Success:', data);
+          })
+            .catch((error) => {
+              console.error('Error:', error);
+          });
     }
 
 return (

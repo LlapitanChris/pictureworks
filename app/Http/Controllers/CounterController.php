@@ -1,6 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Counter;
+use Auth;
+use App\User;
+use Carbon\Carbon;
 
 use Illuminate\Http\Request;
 
@@ -22,7 +26,6 @@ class CounterController extends Controller
 
         $existToday = $clicks->where('date_clicked', $this->dateToday->toDateString())->first();
 
-
         if($existToday) {
             $existToday->click_counts = $request->counts;
         } else {
@@ -34,6 +37,5 @@ class CounterController extends Controller
         
         $existToday->save();
         return json_encode($existToday);
-        
-    }
+  }
 }

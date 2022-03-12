@@ -12,7 +12,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -68,6 +68,16 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h4>Credentials</h4>
+            <p><strong>admin@gmail.com</strong>: password</p>
+            <p><strong>user_1@gmail.com</strong>: password</p>
+            <p><strong>user_2@gmail.com</strong>: password</p>
+            
+        </div>
+        
     </div>
 </div>
 @endsection

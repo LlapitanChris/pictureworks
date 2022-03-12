@@ -23,6 +23,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $this->dateToday = Carbon::now();
+        $this->dateYesterday = Carbon::yesterday()->yesterday();
+        $user = Auth::user();
+        $clicks = $user->counters;
+        $existToday = $clicks->where('date_clicked', $this->dateToday->toDateString())->first();
+
+
+
+        return view('home', ['user' => json_encode($user, true), 'existToday' => json_encode($existToday, true)]);
     }
 }
